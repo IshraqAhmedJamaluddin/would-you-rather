@@ -11,3 +11,31 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+nav {
+  border-bottom: 2px solid rgba(255, 106, 218, 0.555);
+}
+
+nav ul {
+  overflow:hidden;
+  list-style:none;
+  position:relative;
+}
+
+nav ul .left {
+  float: left;
+}
+
+nav ul .right {
+  float: right;
+}
+
+nav ul li {
+  display: inline;
+  margin: 1em;
+}
+
+nav ul li img, .avatar {
+  width: 20px;
+  height: 20px;
+}

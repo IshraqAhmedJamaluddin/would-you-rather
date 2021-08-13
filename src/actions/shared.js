@@ -1,0 +1,26 @@
+import { getInitialData } from '../utils/api'
+import { receiveUsers } from './users'
+import { recieveQuestions } from './questions'
+import { setAuthedUser } from './authedUser'
+import { showLoading, hideLoading } from 'react-redux-loading-bar'
+
+let AUTHED_ID = ''
+
+export function handleInitialData() {
+    return (dispatch) => {
+        dispatch(showLoading())
+        return getInitialData()
+            .then(({ users, questions }) => {
+                dispatch(receiveUsers(users))
+                dispatch(recieveQuestions(questions))
+                dispatch(hideLoading())
+            })
+    }
+}
+
+export function changeUser(username) {
+    return (dispatch) => {
+        AUTHED_ID = username
+        dispatch(setAuthedUser(AUTHED_ID))
+    }
+}
