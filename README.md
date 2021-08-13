@@ -24,3 +24,5 @@ There might be a feature to add more users soon.
 Each user can add a question or answer a question, there's also a leaderboard that shows the top users in this app.
 
 The data is stored locally and will restart after refreshing the page.
+
+The styles are also poor and will be updated soon.
