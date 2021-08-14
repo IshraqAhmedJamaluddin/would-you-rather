@@ -15,7 +15,7 @@ import Logout from './Logout'
 
 class App extends Component {
   componentDidMount() {
-    this.props.dispatch(handleInitialData())
+    this.props.handleInitialData()
   }
   render() {
     if (!this.props.authedUser) {
@@ -50,4 +50,4 @@ function mapStateToProps ({ authedUser }) {
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, { handleInitialData })(App);

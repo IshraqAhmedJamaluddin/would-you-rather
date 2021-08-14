@@ -20,7 +20,7 @@ class Login extends Component {
         const { usr } = this.state
         if (usr in users) {
             // succeed to login
-            this.props.dispatch(changeUser(usr))
+            this.props.changeUser(usr)
             sessionStorage.setItem("authentication", usr)
             this.setState(() => ({
                 usr: '',
@@ -78,4 +78,4 @@ function mapStateToProps ({users, from}) {
     }
 }
 
-export default connect(mapStateToProps)(Login)
+export default connect(mapStateToProps, { changeUser })(Login)

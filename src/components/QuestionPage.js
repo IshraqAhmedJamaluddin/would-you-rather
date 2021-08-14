@@ -20,7 +20,7 @@ class QuestionPage extends Component {
         const { choice } = this.state
         const { dispatch, authedUser, question } = this.props
         const qid = question['id']
-        dispatch(handleSaveAnswer({authedUser, qid, answer:choice }))
+        handleSaveAnswer({authedUser, qid, answer:choice })
         this.setState(() => ({
             toHome: true
         }))
@@ -104,4 +104,4 @@ function mapStateToProps({authedUser, users, questions}, props) {
     }
 }
 
-export default connect(mapStateToProps)(QuestionPage);
+export default connect(mapStateToProps, { handleSaveAnswer })(QuestionPage);
