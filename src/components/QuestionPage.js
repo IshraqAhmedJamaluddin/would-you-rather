@@ -18,7 +18,7 @@ class QuestionPage extends Component {
     handleSubmit = (e) => {
         e.preventDefault()
         const { choice } = this.state
-        const { dispatch, authedUser, question } = this.props
+        const { handleSaveAnswer, authedUser, question } = this.props
         const qid = question['id']
         handleSaveAnswer({authedUser, qid, answer:choice })
         this.setState(() => ({
