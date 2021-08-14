@@ -2,6 +2,12 @@
 
 ## To Start
 
+install:
+
+### `npm install`
+
+Installs all the required packages
+
 run:
 
 ### `npm start`
